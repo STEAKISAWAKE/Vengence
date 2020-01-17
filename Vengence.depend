@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1579273184 source:/home/caden/Documents/GitHub/Vengence/Source/Application.cpp
+	"Application.h"
+
+1579279196 /home/caden/Documents/GitHub/Vengence/Source/Application.h
+
+1579273184 source:/home/caden/Documents/GitHub/Vengence/Source/Library.cpp
+	"Library.h"
+
+1579279039 /home/caden/Documents/GitHub/Vengence/Source/Library.h
+
+1579273184 source:/home/caden/Documents/GitHub/Vengence/Source/Main.cpp
+	"Application.h"
+
+1579280413 source:/home/caden/Documents/GitHub/Vengence/library_glew.cpp
+	"library_glew.h"
+
+1579282380 /home/caden/Documents/GitHub/Vengence/library_glew.h
+	"Library.h"
+	<GL/glew.h>
+

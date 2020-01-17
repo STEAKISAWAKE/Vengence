@@ -8,16 +8,16 @@ class AApplication
         AApplication();
         virtual ~AApplication();
 
-        AApplication(int argc, char** argv)
+        AApplication(int argc, char** argv) {};
 
         //Start library's, begin basic function
-        void Init();
+        void Init() {};
 
         //Update the UI and other features
-        void Update();
+        void Update() {};
 
         //Unload library's and exit application
-        void Shutdown();
+        void Shutdown() {};
 
     protected:
 

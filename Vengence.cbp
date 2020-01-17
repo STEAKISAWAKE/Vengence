@@ -5,6 +5,7 @@
 		<Option title="Vengence" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
+		<Option virtualFolders="Source/Librarys/;" />
 		<Build>
 			<Target title="Debug">
 				<Option output="bin/Debug/Vengence" prefix_auto="1" extension_auto="1" />
@@ -14,6 +15,8 @@
 				<Compiler>
 					<Add option="-g" />
 					<Add directory="Source" />
+					<Add directory="./" />
+					<Add directory="Source/Librarys" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -24,6 +27,8 @@
 				<Compiler>
 					<Add option="-O2" />
 					<Add directory="Source" />
+					<Add directory="./" />
+					<Add directory="Source/Librarys" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -34,9 +39,17 @@
 			<Add option="-Wall" />
 		</Compiler>
 		<Unit filename="Source/Application.cpp" />
-		<Unit filename="Source/Application.h" />
-		<Unit filename="Source/Library.cpp" />
-		<Unit filename="Source/Library.h" />
+		<Unit filename="Source/Application.h">
+			<Option virtualFolder="Source/Librarys/" />
+		</Unit>
+		<Unit filename="Source/Librarys/Librarian.cpp" />
+		<Unit filename="Source/Librarys/Librarian.h" />
+		<Unit filename="Source/Librarys/Library.cpp" />
+		<Unit filename="Source/Librarys/Library.h" />
+		<Unit filename="Source/Librarys/Library_GLEW.cpp" />
+		<Unit filename="Source/Librarys/Library_GLEW.h" />
+		<Unit filename="Source/Librarys/Library_GLFW3.cpp" />
+		<Unit filename="Source/Librarys/Library_GLFW3.h" />
 		<Unit filename="Source/Main.cpp" />
 		<Extensions>
 			<code_completion />
