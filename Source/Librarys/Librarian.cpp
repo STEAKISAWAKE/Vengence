@@ -35,6 +35,9 @@ bool ALibrarian::InitalizeLibrarys()
 
     for(int i = 0; i < int(Librarys.size()); i++)
     {
+
+        std::cout << "Initalizing library " << Librarys[i]->Name << "." << std::endl;
+
         if(!Librarys[i]->customInitalize && Librarys[i]->InitalizeLibrary() == false)
         {
             std::cout << "Initalizing library " << Librarys[i]->Name << " failed!" << std::endl;

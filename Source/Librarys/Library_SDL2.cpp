@@ -15,7 +15,7 @@ ALibrary_SDL2::~ALibrary_SDL2()
 
 bool ALibrary_SDL2::InitalizeLibrary()
 {
-    if ( SDL_Init( SDL_INIT_EVERYTHING ) != 0 )
+    if ( SDL_Init( SDL_INIT_VIDEO ) != 0 )
     {
         std::cout << "Unable to initialize SDL: %s" << SDL_GetError() << std::endl;
         return false;

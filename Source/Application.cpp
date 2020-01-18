@@ -37,7 +37,7 @@ void AApplication::Update()
 {
     while (true)
     {
-      // Get the next event
+      // SDL Events
       SDL_Event event;
       if (SDL_PollEvent(&event))
       {
@@ -47,6 +47,10 @@ void AApplication::Update()
           break;
         }
       }
+
+      //App logic
+
+
     }
 }
 
