@@ -3,17 +3,13 @@
 
 #include "Library.h"
 
-#define GLEW_STATIC
 #include <GL/glew.h>
-
 
 class ALibrary_GLEW : public ALibrary
 {
     public:
         ALibrary_GLEW();
         virtual ~ALibrary_GLEW();
-
-
 
         bool InitalizeLibrary() override;
         void ShutdownLibrary() override;

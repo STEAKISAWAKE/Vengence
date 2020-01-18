@@ -12,9 +12,12 @@ class ALibrarian
         ALibrarian();
         virtual ~ALibrarian();
 
-        std::vector<ALibrary> Librarys;
+        std::vector<ALibrary*> Librarys;
 
         ALibrary* GetLibrary(std::string LibraryName);
+
+        virtual bool InitalizeLibrarys();
+        virtual void ShutdownLibrarys();
 
     protected:
 

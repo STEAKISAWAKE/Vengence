@@ -10,9 +10,13 @@ class ALibrary
         virtual ~ALibrary();
 
         std::string Name = "Unnamed Library";
+        bool customInitalize = false;
+
 
         virtual bool InitalizeLibrary() { return false; }
         virtual void ShutdownLibrary() { }
+
+
 
     protected:
 

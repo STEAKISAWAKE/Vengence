@@ -1,9 +1,12 @@
 
 #include "library_glew.h"
+#include <iostream>
 
 ALibrary_GLEW::ALibrary_GLEW()
 {
     //ctor
+    Name = "GLEW";
+    customInitalize = true;
 }
 
 ALibrary_GLEW::~ALibrary_GLEW()
@@ -13,7 +16,15 @@ ALibrary_GLEW::~ALibrary_GLEW()
 
 bool ALibrary_GLEW::InitalizeLibrary()
 {
-    return false;
+    GLenum err = glewInit();
+    if (GLEW_OK != err)
+    {
+      //Print error that glew failed.
+      std::cout << "Could not load glew!" << glewGetErrorString(err) << std::endl;
+      return false;
+    }
+
+    return true;
 }
 
 void ALibrary_GLEW::ShutdownLibrary()

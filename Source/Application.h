@@ -1,6 +1,8 @@
 #ifndef AAPPLICATION_H
 #define AAPPLICATION_H
 
+class ALibrarian_Main;
+class AWindow;
 
 class AApplication
 {
@@ -8,20 +10,23 @@ class AApplication
         AApplication();
         virtual ~AApplication();
 
-        AApplication(int argc, char** argv) {};
+        AApplication(int argc, char** argv);
 
         //Start library's, begin basic function
-        void Init() {};
+        void Init();
 
         //Update the UI and other features
-        void Update() {};
+        void Update();
 
         //Unload library's and exit application
-        void Shutdown() {};
+        void Shutdown();
 
     protected:
 
     private:
+        ALibrarian_Main* Librarian_m;
+        AWindow* window;
+
 };
 
 #endif // AAPPLICATION_H

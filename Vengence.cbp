@@ -5,27 +5,69 @@
 		<Option title="Vengence" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
-		<Option virtualFolders="Source/Librarys/;" />
+		<Option virtualFolders="Source\Librarys\;" />
 		<Build>
-			<Target title="Debug">
-				<Option output="bin/Debug/Vengence" prefix_auto="1" extension_auto="1" />
-				<Option object_output="obj/Debug/" />
+			<Target title="DebugLinux">
+				<Option output="bin/DebugLinux/Vengence" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/DebugLinux/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
+					<Add option="-std=c++11" />
 					<Add option="-g" />
+					<Add directory="Source" />
+					<Add directory="Include" />
+					<Add directory="Source/Librarys" />
+				</Compiler>
+				<Linker>
+					<Add directory="Librarys" />
+				</Linker>
+			</Target>
+			<Target title="ReleaseLinux">
+				<Option output="bin/ReleaseLinux/Vengence" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/ReleaseLinux/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-std=c++11" />
 					<Add directory="Source" />
 					<Add directory="./" />
 					<Add directory="Source/Librarys" />
 				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
 			</Target>
-			<Target title="Release">
-				<Option output="bin/Release/Vengence" prefix_auto="1" extension_auto="1" />
+			<Target title="DebugWindows">
+				<Option output="bin/DebugWindows/Vengence" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/DebugWindows/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-std=c++11" />
+					<Add option="-g" />
+					<Add option="-DGLEW_STATIC" />
+					<Add directory="Source" />
+					<Add directory="Include" />
+					<Add directory="Source/Librarys" />
+				</Compiler>
+				<Linker>
+					<Add option="-lSDL2" />
+					<Add option="-lSDL2main" />
+					<Add option="-lglew32" />
+					<Add option="-lopengl32" />
+					<Add directory="Librarys" />
+				</Linker>
+			</Target>
+			<Target title="ReleaseWindows">
+				<Option output="bin/ReleaseWindows/Vengence" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add option="-std=c++11" />
 					<Add directory="Source" />
 					<Add directory="./" />
 					<Add directory="Source/Librarys" />
@@ -44,13 +86,19 @@
 		</Unit>
 		<Unit filename="Source/Librarys/Librarian.cpp" />
 		<Unit filename="Source/Librarys/Librarian.h" />
+		<Unit filename="Source/Librarys/Librarian_Main.cpp" />
+		<Unit filename="Source/Librarys/Librarian_Main.h" />
 		<Unit filename="Source/Librarys/Library.cpp" />
 		<Unit filename="Source/Librarys/Library.h" />
 		<Unit filename="Source/Librarys/Library_GLEW.cpp" />
 		<Unit filename="Source/Librarys/Library_GLEW.h" />
 		<Unit filename="Source/Librarys/Library_GLFW3.cpp" />
 		<Unit filename="Source/Librarys/Library_GLFW3.h" />
+		<Unit filename="Source/Librarys/Library_SDL2.cpp" />
+		<Unit filename="Source/Librarys/Library_SDL2.h" />
 		<Unit filename="Source/Main.cpp" />
+		<Unit filename="Source/Window.cpp" />
+		<Unit filename="Source/Window.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
