@@ -1,5 +1,5 @@
 
-#include "library_glew.h"
+#include "Library_GLEW.h"
 #include <iostream>
 
 ALibrary_GLEW::ALibrary_GLEW()
